@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c25">
+  <meta name="description" content="Follow Warwick Hardest Adventure's collective climb to the summit of Mount Everest and support the expedition.">
+  <title>The Climb to Everest | Warwick Hardest Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span class="live-dot"></span> THE WARWICK EXPEDITION IS UNDERWAY <span class="announcement-separator">/</span> EVERY METRE TAKES US CLOSER</div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="The Climb to Everest home">
+      <span class="brand-mark">W<span>H</span>A</span>
+      <span class="brand-copy"><strong>THE CLIMB TO EVEREST</strong><small>WARWICK HARDEST ADVENTURE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="#challenge">The challenge</a>
+      <a href="#ascent">Live ascent</a>
+      <a href="#climbers">Climbers</a>
+      <a href="#cause">Our cause</a>
+      <button class="nav-login" id="openLogin">Climber login <span>↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">ONE TEAM. ONE MOUNTAIN. ONE SUMMIT.</p>
+        <h1>WE CLIMB.<br><em>EVEREST RISES.</em></h1>
+        <p class="hero-intro">Warwick Hardest Adventure is taking on an extraordinary challenge: collectively climbing the equivalent height of Mount Everest, one wall session at a time.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#ascent">Follow our ascent <span>↓</span></a>
+          <a class="button button-ghost" href="#cause">Why we're climbing</a>
+        </div>
+        <div class="hero-footnote"><span class="line"></span> 8,848.86 METRES TO THE TOP OF THE WORLD</div>
+      </div>
+      <div class="hero-coordinate">27°59′17″N&nbsp; 86°55′31″E</div>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="ascent-section section-pad" id="ascent">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE EXPEDITION, IN REAL TIME</p><h2>THE ASCENT</h2></div>
+        <div class="live-label"><span class="live-dot"></span><span id="connectionLabel">DEMO TRACKER</span></div>
+      </div>
+      <div class="ascent-grid">
+        <div class="mountain-panel">
+          <div class="mountain-topline"><span>EVEREST · NEPAL / TIBET</span><span>8,848.86 M</span></div>
+          <div class="mountain-visual" role="img" aria-label="Illustrated Mount Everest progress route">
+            <svg class="mountain-svg" viewBox="0 0 760 520" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs>
+                <linearGradient id="mountainFill" x1="0" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#f4f5f1"/><stop offset="1" stop-color="#8799a1"/></linearGradient>
+                <linearGradient id="routeGradient" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d4a96b"/><stop offset="1" stop-color="#f4d8a9"/></linearGradient>
+                <clipPath id="mountainClip"><path d="M20 466 L135 365 L210 389 L322 220 L389 272 L493 104 L540 146 L602 30 L647 107 L740 466 Z"/></clipPath>
+              </defs>
+              <path d="M20 466 L135 365 L210 389 L322 220 L389 272 L493 104 L540 146 L602 30 L647 107 L740 466 Z" fill="url(#mountainFill)" opacity=".92"/>
+              <path d="M540 146 L602 30 L647 107 L615 91 L600 119 L584 87 L565 142 Z" fill="#fff" opacity=".92"/>
+              <path d="M493 104 L540 146 L515 137 L500 155 L477 145 Z" fill="#fff" opacity=".75"/>
+              <g clip-path="url(#mountainClip)" opacity=".22" fill="none" stroke="#52646b" stroke-width="1.5">
+                <path d="M0 420 Q190 340 350 400 T780 380 M0 390 Q180 310 360 365 T780 345 M0 350 Q180 275 360 330 T780 310 M0 310 Q180 235 360 290 T780 270 M0 270 Q180 195 360 250 T780 230"/>
+              </g>
+              <path d="M78 451 C150 423 171 407 220 382 S302 335 330 290 S408 250 447 212 S530 173 552 142 S585 100 610 66" fill="none" stroke="#41545d" stroke-width="5" stroke-dasharray="5 10" opacity=".65" stroke-linecap="round"/>
+              <path id="progressRoute" d="M78 451 C150 423 171 407 220 382 S302 335 330 290 S408 250 447 212 S530 173 552 142 S585 100 610 66" fill="none" stroke="url(#routeGradient)" stroke-width="7" stroke-linecap="round" stroke-dasharray="0 1000"/>
+              <g class="camp-labels">
+                <text x="48" y="490">BASE CAMP</text><text x="250" y="352">CAMP I</text><text x="424" y="230">CAMP II</text><text x="555" y="125">CAMP III</text><text x="620" y="22">SUMMIT</text>
+              </g>
+              <g id="climberMarker" transform="translate(78 451)">
+                <circle r="15" fill="#d4a96b" opacity=".25"/><circle r="7" fill="#d4a96b" stroke="#fff" stroke-width="3"/>
+              </g>
+              <path d="M0 467 H760" stroke="#a9b6b9" stroke-width="2"/>
+            </svg>
+            <div class="mountain-caption">A collective virtual ascent. Every logged metre moves the team higher.</div>
+          </div>
+          <div class="mountain-legend"><span><i class="legend-line"></i> TEAM ROUTE</span><span><i class="legend-dot"></i> CURRENT POSITION</span></div>
+        </div>
+        <aside class="progress-card">
+          <p class="eyebrow">COLLECTIVE ELEVATION</p>
+          <div class="big-number"><span id="totalMetres">0</span><small>m</small></div>
+          <p class="muted">of 8,848.86 metres climbed</p>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+          <div class="progress-meta"><span id="progressPercent">0.00%</span><span>SUMMIT</span></div>
+          <div class="stat-divider"></div>
+          <div class="mini-stats">
+            <div><strong id="remainingMetres">8,849</strong><span>METRES TO GO</span></div>
+            <div><strong id="sessionCount">0</strong><span>SESSIONS LOGGED</span></div>
+            <div><strong id="climberCount">0</strong><span>CLIMBERS</span></div>
+          </div>
+          <a class="button button-dark full-width" href="#climbers">Meet the climbers <span>→</span></a>
+          <p class="small-note">Progress is calculated from participant-submitted climbing sessions.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="milestones-section">
+      <div class="milestone-heading"><p class="eyebrow light">THE ROUTE AHEAD</p><h2>EVERY CAMP IS A MILESTONE.</h2><p>From the foothills to the roof of the world, we'll get there together.</p></div>
+      <div class="milestone-list" id="milestoneList">
+        <div class="milestone"><span class="milestone-alt">0 M</span><strong>BASE CAMP</strong><small>The expedition begins.</small></div>
+        <div class="milestone"><span class="milestone-alt">2,500 M</span><strong>CAMP I</strong><small>Our first major push.</small></div>
+        <div class="milestone"><span class="milestone-alt">4,500 M</span><strong>CAMP II</strong><small>Halfway to the summit.</small></div>
+        <div class="milestone"><span class="milestone-alt">6,500 M</span><strong>CAMP III</strong><small>Into the high mountains.</small></div>
+        <div class="milestone"><span class="milestone-alt">8,000 M</span><strong>THE FINAL PUSH</strong><small>Within reach of the top.</small></div>
+        <div class="milestone summit"><span class="milestone-alt">8,848.86 M</span><strong>THE SUMMIT</strong><small>We made it.</small></div>
+      </div>
+    </section>
+
+    <section class="climbers-section section-pad" id="climbers">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE PEOPLE BEHIND THE METRES</p><h2>MEET THE CLIMBERS</h2></div>
+        <a class="text-link" href="#" id="leaderboardLink">LEADERBOARD <span>↗</span></a>
+      </div>
+      <div class="leaderboard">
+        <div class="leaderboard-head"><span>RANK / CLIMBER</span><span>SESSIONS</span><span>ELEVATION</span></div>
+        <div id="leaderboardRows"><div class="empty-state">Climber contributions will appear here as sessions are logged.</div></div>
+      </div>
+      <p class="section-footnote">Climbers are ranked by verified elevation contributed to the team.</p>
+    </section>
+
+    <section class="cause-section" id="cause">
+      <div class="cause-image"></div>
+      <div class="cause-content">
+        <p class="eyebrow light">MORE THAN A MOUNTAIN</p>
+        <h2>HELP US<br><em>REACH THE TOP.</em></h2>
+        <p>Every climb is part of something bigger. Support Warwick Hardest Adventure's Everest challenge and help make this expedition possible.</p>
+        <a class="button button-gold" id="donateLink" href="#" target="_blank" rel="noopener">Support the expedition <span>↗</span></a>
+        <small class="donation-note">You'll be taken to our official fundraising page.</small>
+      </div>
+    </section>
+
+    <section class="log-cta">
+      <div><p class="eyebrow">ARE YOU PART OF THE TEAM?</p><h2>YOUR NEXT SESSION<br>TAKES US HIGHER.</h2></div>
+      <button class="button button-dark" id="openLoginBottom">Log your climb <span>→</span></button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">W<span>H</span>A</span><span class="brand-copy"><strong>THE CLIMB TO EVEREST</strong><small>WARWICK HARDEST ADVENTURE</small></span></a>
+    <span>ONE TEAM. ONE MOUNTAIN. ONE SUMMIT.</span>
+    <span>© <span id="year"></span> WARWICK HARDEST ADVENTURE</span>
+  </footer>
+
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <p class="eyebrow">JOIN THE ASCENT</p>
+      <h2 id="modalTitle">CLIMBER LOGIN</h2>
+      <p class="modal-intro">Sign in to log a session and add your metres to the team's ascent.</p>
+      <div id="authPanel">
+        <label for="emailInput">EMAIL ADDRESS</label>
+        <input id="emailInput" type="email" placeholder="you@example.com" autocomplete="email">
+        <label for="passwordInput">PASSWORD</label>
+        <input id="passwordInput" type="password" placeholder="Your password" autocomplete="current-password">
+        <div class="auth-actions"><button class="button button-dark" id="signInButton">Sign in</button><button class="button button-outline" id="signUpButton">Create account</button></div>
+        <p class="form-message" id="authMessage" aria-live="polite"></p>
+      </div>
+      <div id="sessionPanel" hidden>
+        <p class="signed-in-as">SIGNED IN AS <strong id="signedInEmail"></strong></p>
+        <form id="climbForm">
+          <label for="climbDate">SESSION DATE</label>
+          <input id="climbDate" type="date" required>
+          <label for="climbMetres">VERTICAL METRES CLIMBED</label>
+          <input id="climbMetres" type="number" min="1" max="5000" step="1" placeholder="e.g. 45" required>
+          <label for="climbLocation">CLIMBING WALL / LOCATION</label>
+          <input id="climbLocation" type="text" maxlength="100" placeholder="e.g. Warwick Sport">
+          <label for="climbNotes">SESSION NOTES <span class="optional">(OPTIONAL)</span></label>
+          <textarea id="climbNotes" rows="2" maxlength="400" placeholder="A few words about your session..."></textarea>
+          <button class="button button-gold full-width" type="submit">Submit climbing session <span>→</span></button>
+        </form>
+        <p class="form-message" id="logMessage" aria-live="polite"></p>
+        <button class="sign-out" id="signOutButton">Sign out</button>
+      </div>
+      <p class="demo-warning" id="demoWarning">Preview mode: connect Supabase to enable real accounts and shared submissions.</p>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
